@@ -17,7 +17,7 @@ func main() {
 
 func GetHour(w http.ResponseWriter, req *http.Request) {
 	currentHour:= time.Now()
-	fmt.Fprintf(w, "%dh%02d", currentHour.Hour(),currentHour.Minute())
+	fmt.Fprintf(w, "%02dh%02d", currentHour.Hour(),currentHour.Minute())
 }
 
 func PostEntry(w http.ResponseWriter, req *http.Request) {
